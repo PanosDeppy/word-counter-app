@@ -1,17 +1,18 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+import { App } from "./App";
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+import "bootstrap/dist/css/bootstrap.css";
+import "./index.css";
+
+/* First create a variable to store and target the root element (div)
+in order to setup the main container of our app. */
+const rootContainer = document.getElementById("root");
+
+/* Second create another variable to store and create the root
+and basically set it up as the container via the React DOM. */
+const root = ReactDOM.createRoot(rootContainer);
+
+// Finally, render the App component which is the main component for our app.
+root.render(<App />);
